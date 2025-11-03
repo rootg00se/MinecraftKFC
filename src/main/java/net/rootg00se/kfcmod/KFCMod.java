@@ -13,11 +13,13 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.rootg00se.kfcmod.item.ModCreativeModeTabs;
+import net.rootg00se.kfcmod.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(KFCMod.MOD_ID)
 public class KFCMod {
-    public static final String MOD_ID = "rootg00sekfcmod";
+    public static final String MOD_ID = "kfcmod";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public KFCMod() {
@@ -26,6 +28,9 @@ public class KFCMod {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
