@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParams, output) -> {
                         output.accept(ModItems.FRIED_DRUMSTICK.get());
                         output.accept(ModItems.CHICKEN_BUCKET.get());
+                        output.accept(ModItems.FAMILY_BUCKET.get());
                     }).build()
     );
 
