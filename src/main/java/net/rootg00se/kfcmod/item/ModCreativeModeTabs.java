@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.kfcmod.kfc_items"))
                     .displayItems((itemDisplayParams, output) -> {
                         output.accept(ModItems.FRIED_DRUMSTICK.get());
+                        output.accept(ModItems.CHICKEN_BUCKET.get());
                     }).build()
     );
 

@@ -1,5 +1,9 @@
 {
   "item.kfcmod.fried_drumstick": "Fried Drumstick",
-  "creativetab.kfcmod.kfc_items": "KFC Items",
-  "tooltip.kfcmod.fried_drumstick": "Tasty fried drumstick"
+  "item.kfcmod.chicken_bucket": "Chicken Bucket",
+
+  "tooltip.kfcmod.fried_drumstick": "Tasty fried drumstick",
+  "tooltip.kfcmod.chicken_bucket": "Chicken bucket. Gives regeneration",
+
+  "creativetab.kfcmod.kfc_items": "KFC Items"
 }

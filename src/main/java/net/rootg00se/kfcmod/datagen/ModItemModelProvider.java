@@ -14,5 +14,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.FRIED_DRUMSTICK.get());
+        basicItem(ModItems.CHICKEN_BUCKET.get());
     }
 }

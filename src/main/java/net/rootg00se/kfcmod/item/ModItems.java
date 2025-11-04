@@ -25,6 +25,14 @@ public class ModItems {
             }
     );
 
+    public static final RegistryObject<Item> CHICKEN_BUCKET = ITEMS.register("chicken_bucket", () -> new Item(new Item.Properties().food(ModFoodProperties.CHICKEN_BUCKET)) {
+        @Override
+        public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+            pTooltipComponents.add(Component.translatable("tooltip.kfcmod.chicken_bucket"));
+            super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+        }
+    });
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
