@@ -16,5 +16,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.FRIED_DRUMSTICK.get());
         basicItem(ModItems.CHICKEN_BUCKET.get());
         basicItem(ModItems.FAMILY_BUCKET.get());
+        basicItem(ModItems.BREADING.get());
     }
 }

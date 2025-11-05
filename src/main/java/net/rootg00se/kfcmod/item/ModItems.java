@@ -34,6 +34,14 @@ public class ModItems {
         }
     });
 
+    public static final RegistryObject<Item> BREADING = ITEMS.register("breading", () -> new Item(new Item.Properties()) {
+        @Override
+        public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+            pTooltipComponents.add(Component.translatable("tooltip.kfcmod.breading"));
+            super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+        }
+    });
+
     public static final RegistryObject<Item> FAMILY_BUCKET = ITEMS.register("family_bucket", () -> new Item(new Item.Properties().food(ModFoodProperties.FAMILY_BUCKET)) {
         @Override
         public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {

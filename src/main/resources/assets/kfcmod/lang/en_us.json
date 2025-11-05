@@ -2,11 +2,13 @@
   "item.kfcmod.fried_drumstick": "Fried Drumstick",
   "item.kfcmod.chicken_bucket": "Chicken Bucket",
   "item.kfcmod.family_bucket": "Family Bucket",
+  "item.kfcmod.breading": "Breading",
 
   "tooltip.kfcmod.family_bucket.shift_down": "Eat on your own risk",
   "tooltip.kfcmod.family_bucket": "Really unhealthy food. Press §eShift§r for more Information!",
   "tooltip.kfcmod.fried_drumstick": "Tasty fried drumstick",
   "tooltip.kfcmod.chicken_bucket": "Chicken bucket. Gives regeneration",
+  "tooltip.kfcmod.breading": "Can be used to make fried chicken drumstick",
 
   "creativetab.kfcmod.kfc_items": "KFC Items"
 }

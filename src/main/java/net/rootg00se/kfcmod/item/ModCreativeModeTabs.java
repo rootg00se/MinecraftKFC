@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FRIED_DRUMSTICK.get());
                         output.accept(ModItems.CHICKEN_BUCKET.get());
                         output.accept(ModItems.FAMILY_BUCKET.get());
+                        output.accept(ModItems.BREADING.get());
                     }).build()
     );
 
