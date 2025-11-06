@@ -4,11 +4,15 @@
   "item.kfcmod.family_bucket": "Family Bucket",
   "item.kfcmod.breading": "Breading",
 
+  "block.kfcmod.breading_ore": "Breading Ore",
+  "block.kfcmod.breading_deepslate_ore": "Breading Deepslate Ore",
+
   "tooltip.kfcmod.family_bucket.shift_down": "Eat on your own risk",
   "tooltip.kfcmod.family_bucket": "Really unhealthy food. Press §eShift§r for more Information!",
   "tooltip.kfcmod.fried_drumstick": "Tasty fried drumstick",
   "tooltip.kfcmod.chicken_bucket": "Chicken bucket. Gives regeneration",
   "tooltip.kfcmod.breading": "Can be used to make fried chicken drumstick",
 
-  "creativetab.kfcmod.kfc_items": "KFC Items"
+  "creativetab.kfcmod.kfc_items": "KFC Items",
+  "creativetab.kfcmod.kfc_blocks": "KFC Blocks"
 }

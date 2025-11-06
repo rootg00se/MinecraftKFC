@@ -1,0 +1,51 @@
+package net.rootg00se.kfcmod.datagen;
+
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.registries.RegistryObject;
+import net.rootg00se.kfcmod.block.ModBlocks;
+import net.rootg00se.kfcmod.item.ModItems;
+
+import java.util.Set;
+
+public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    protected ModBlockLootTableProvider(HolderLookup.Provider pRegistries) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), pRegistries);
+    }
+
+    @Override
+    protected void generate() {
+        dropSelf(ModBlocks.BREADING_ORE.get());
+        dropSelf(ModBlocks.BREADING_DEEPSLATE_ORE.get());
+
+        this.add(ModBlocks.BREADING_ORE.get(), block -> createOreDrop(ModBlocks.BREADING_ORE.get(), ModItems.BREADING.get()));
+        this.add(ModBlocks.BREADING_DEEPSLATE_ORE.get(), block -> createMultipleOreDrops(ModBlocks.BREADING_DEEPSLATE_ORE.get(), ModItems.BREADING.get(), 2, 6));
+    }
+
+    protected LootTable.Builder createMultipleOreDrops(net.minecraft.world.level.block.Block pBlock, Item item, float minDrops, float maxDrops) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(
+                pBlock, this.applyExplosionDecay(
+                        pBlock, LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
+                                .apply(ApplyBonusCount.addOreBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )
+        );
+    }
+
+    @Override
+    protected Iterable<Block> getKnownBlocks() {
+        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+    }
+}
