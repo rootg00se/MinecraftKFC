@@ -1,4 +1,7 @@
-// 1.21	2025-11-07T14:18:39.1739992	Registries
+// 1.21	2025-11-08T19:47:46.6476546	Registries
+2d62b5ded1ace7866255fd11f0227c74fa2f004b data/kfcmod/forge/biome_modifier/add_breading_deepslate_ore.json
 739eba6543d5a9e53afa494c2c8c60d08b7e0828 data/kfcmod/forge/biome_modifier/add_breading_ore.json
-1ef284284c2620fb37dbc12c16d2086e807274ec data/kfcmod/worldgen/configured_feature/breading_ore.json
-eebaafb4239b8d85e424c3b1786cf8403c77e2ce data/kfcmod/worldgen/placed_feature/breading_ore_placed.json
+378b309862d9dae7a5446617acd744e1337371e0 data/kfcmod/worldgen/configured_feature/breading_deepslate.json
+da09d2cc546941b9aaf4ae85e2f5aaf5c802b677 data/kfcmod/worldgen/configured_feature/breading_ore.json
+b097fea1654233246518860f295b3128c9d3ac53 data/kfcmod/worldgen/placed_feature/breading_deeplate_placed.json
+a97d23af5316ae5c29122a55eb78efdd5bd446b8 data/kfcmod/worldgen/placed_feature/breading_ore_placed.json

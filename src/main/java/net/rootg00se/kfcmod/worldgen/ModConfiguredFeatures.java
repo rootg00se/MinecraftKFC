@@ -18,17 +18,14 @@ import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BREADING_ORE_KEY = registerKey("breading_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BREADING_DEEPSLATE_KEY = registerKey("breading_deepslate");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
-        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        List<OreConfiguration.TargetBlockState> breadingOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.BREADING_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.BREADING_DEEPSLATE_ORE.get().defaultBlockState())
-        );
-
-        register(context, BREADING_ORE_KEY, Feature.ORE, new OreConfiguration(breadingOres, 3));
+        register(context, BREADING_ORE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables, ModBlocks.BREADING_ORE.get().defaultBlockState(), 5));
+        register(context, BREADING_DEEPSLATE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables, ModBlocks.BREADING_DEEPSLATE_ORE.get().defaultBlockState(), 5));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

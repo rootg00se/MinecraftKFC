@@ -16,13 +16,19 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BREADING_ORE_PLACED_KEY = registerKey("breading_ore_placed");
+    public static final ResourceKey<PlacedFeature> BREADING_DEEPSLATE_ORE_PLACED_KEY = registerKey("breading_deeplate_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, BREADING_ORE_PLACED_KEY, configuredFeatures.getOrThrow(
                 ModConfiguredFeatures.BREADING_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(16, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64),  VerticalAnchor.absolute(80)))
+                ModOrePlacement.commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64),  VerticalAnchor.absolute(10)))
+        );
+
+        register(context, BREADING_DEEPSLATE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(
+                ModConfiguredFeatures.BREADING_DEEPSLATE_KEY),
+                ModOrePlacement.commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.absolute(-64),  VerticalAnchor.absolute(0)))
         );
     }
 

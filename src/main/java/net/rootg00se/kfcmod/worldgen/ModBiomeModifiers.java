@@ -14,6 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_BREADING_ORE = registerKey("add_breading_ore");
+    public static final ResourceKey<BiomeModifier> ADD_BREADING_DEEPSLATE_ORE = registerKey("add_breading_deepslate_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeature = context.lookup(Registries.PLACED_FEATURE);
@@ -24,6 +25,15 @@ public class ModBiomeModifiers {
                 new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                         biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                         HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.BREADING_ORE_PLACED_KEY)),
+                        GenerationStep.Decoration.UNDERGROUND_ORES
+                )
+        );
+
+        context.register(
+                ADD_BREADING_DEEPSLATE_ORE,
+                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                        biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                        HolderSet.direct(placedFeature.getOrThrow(ModPlacedFeatures.BREADING_DEEPSLATE_ORE_PLACED_KEY)),
                         GenerationStep.Decoration.UNDERGROUND_ORES
                 )
         );
