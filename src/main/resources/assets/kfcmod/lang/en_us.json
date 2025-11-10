@@ -14,5 +14,7 @@
   "tooltip.kfcmod.breading": "Can be used to make fried chicken drumstick",
 
   "creativetab.kfcmod.kfc_items": "KFC Items",
-  "creativetab.kfcmod.kfc_blocks": "KFC Blocks"
+  "creativetab.kfcmod.kfc_blocks": "KFC Blocks",
+
+  "effect.kfcmod.diarrhea": "Diarrhea"
 }

@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.rootg00se.kfcmod.block.ModBlocks;
+import net.rootg00se.kfcmod.effect.ModEffects;
 import net.rootg00se.kfcmod.item.ModCreativeModeTabs;
 import net.rootg00se.kfcmod.item.ModItems;
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ public class KFCMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
