@@ -4,6 +4,10 @@
   "item.kfcmod.family_bucket": "Family Bucket",
   "item.kfcmod.breading": "Breading",
 
+  "item.minecraft.potion.effect.diarrhea_potion": "Hot Sauce",
+  "item.minecraft.splash_potion.effect.diarrhea_potion": "Splash Hot Sauce",
+  "item.minecraft.lingering_potion.effect.diarrhea_potion": "Lingering Hot Sauce",
+
   "block.kfcmod.breading_ore": "Breading Ore",
   "block.kfcmod.breading_deepslate_ore": "Breading Deepslate Ore",
 

@@ -17,6 +17,7 @@ import net.rootg00se.kfcmod.block.ModBlocks;
 import net.rootg00se.kfcmod.effect.ModEffects;
 import net.rootg00se.kfcmod.item.ModCreativeModeTabs;
 import net.rootg00se.kfcmod.item.ModItems;
+import net.rootg00se.kfcmod.potion.ModPotions;
 import org.slf4j.Logger;
 
 @Mod(KFCMod.MOD_ID)
@@ -35,6 +36,7 @@ public class KFCMod {
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

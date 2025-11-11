@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.rootg00se.kfcmod.KFCMod;
 import net.rootg00se.kfcmod.block.ModBlocks;
+import net.rootg00se.kfcmod.potion.ModPotions;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KFCMod.MOD_ID);
